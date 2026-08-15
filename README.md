@@ -394,7 +394,7 @@ Passionate about building scalable backend applications, mastering Java technolo
 
 **GitHub**
 
-https://github.com/mohammadnaveed1701-source
+https://github.com/mdnav
 
 **LinkedIn**
 
