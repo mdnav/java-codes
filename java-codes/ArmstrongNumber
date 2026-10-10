@@ -1,0 +1,39 @@
+```java
+import java.util.Scanner;
+
+public class ArmstrongNumber {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int n, temp, digit, count = 0, sum = 0;
+
+        System.out.print("Enter a number: ");
+        n = sc.nextInt();
+
+        // Step 1: Count digits
+        temp = n;
+        while (temp > 0) {
+            count++;
+            temp = temp / 10;
+        }
+
+        // Step 2: Find sum of powers of digits
+        temp = n;
+
+        while (temp > 0) {
+            digit = temp % 10;
+            sum = sum + (int)Math.pow(digit, count);
+            temp = temp / 10;
+        }
+
+        // Step 3: Compare
+        if (sum == n)
+            System.out.println(n + " is an Armstrong Number.");
+        else
+            System.out.println(n + " is Not an Armstrong Number.");
+
+        sc.close();
+    }
+}
+```
