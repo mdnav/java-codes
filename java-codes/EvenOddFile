@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.Scanner;
+
+public class EvenOddFile {
+    public static void main(String[] args) throws IOException {
+
+        Scanner sc = new Scanner(System.in);
+        FileWriter even = new FileWriter("Even.txt");
+        FileWriter odd = new FileWriter("Odd.txt");
+
+        System.out.print("Enter how many numbers: ");
+        int n = sc.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+            int num = sc.nextInt();
+
+            if (num % 2 == 0)
+                even.write(num + "\n");
+            else
+                odd.write(num + "\n");
+        }
+
+        even.close();
+        odd.close();
+        sc.close();
+
+        System.out.println("Numbers stored successfully.");
+    }
+}

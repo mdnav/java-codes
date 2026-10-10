@@ -1,0 +1,20 @@
+import java.io.*;
+
+public class FileCopy {
+    public static void main(String[] args) throws IOException {
+
+        FileReader r = new FileReader("input.txt");
+        FileWriter w = new FileWriter("output.txt");
+
+        int ch;
+
+        while ((ch = r.read()) != -1) {
+            w.write(ch);
+        }
+
+        r.close();
+        w.close();
+
+        System.out.println("File copied successfully.");
+    }
+}
