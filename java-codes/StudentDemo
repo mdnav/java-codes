@@ -1,0 +1,29 @@
+class Student {
+
+    int id;
+    String name;
+    String branch;
+
+    Student(int id, String name, String branch) {
+        this.id = id;
+        this.name = name;
+        this.branch = branch;
+    }
+
+    void display() {
+        System.out.println("Student ID : " + id);
+        System.out.println("Student Name : " + name);
+        System.out.println("Branch : " + branch);
+    }
+}
+
+public class StudentDemo {
+    public static void main(String[] args) {
+
+        Student s1 = new Student(101, "Rahul", "ECE");
+        Student s2 = new Student(102, "Priya", "CSE");
+
+        s1.display();
+        s2.display();
+    }
+}

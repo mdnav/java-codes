@@ -1,0 +1,44 @@
+class Student {
+
+    int id;
+    String name;
+    String branch;
+
+    Student() {
+        id = 0;
+        name = "Not Assigned";
+        branch = "Not Assigned";
+    }
+
+    Student(String name) {
+        id = 0;
+        this.name = name;
+        branch = "Not Assigned";
+    }
+
+    Student(int id, String name, String branch) {
+        this.id = id;
+        this.name = name;
+        this.branch = branch;
+    }
+
+    void display() {
+        System.out.println("Student ID : " + id);
+        System.out.println("Student Name : " + name);
+        System.out.println("Branch : " + branch);
+        System.out.println();
+    }
+}
+
+public class ConstructorOverloading {
+    public static void main(String[] args) {
+
+        Student s1 = new Student();
+        Student s2 = new Student("Rahul");
+        Student s3 = new Student(101, "Priya", "ECE");
+
+        s1.display();
+        s2.display();
+        s3.display();
+    }
+}
