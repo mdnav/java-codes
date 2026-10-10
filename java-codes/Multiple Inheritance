@@ -1,0 +1,33 @@
+interface Sports {
+    void sportsMarks();
+}
+
+interface Academics {
+    void academicMarks();
+}
+
+class Student implements Sports, Academics {
+
+    public void sportsMarks() {
+        System.out.println("Sports Marks = 85");
+    }
+
+    public void academicMarks() {
+        System.out.println("Academic Marks = 92");
+    }
+
+    void totalMarks() {
+        System.out.println("Total Marks = " + (85 + 92));
+    }
+}
+
+public class MultipleInheritanceDemo {
+    public static void main(String[] args) {
+
+        Student s = new Student();
+
+        s.sportsMarks();
+        s.academicMarks();
+        s.totalMarks();
+    }
+}

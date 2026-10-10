@@ -1,0 +1,61 @@
+    class Student {
+
+        int rollNo;
+        String name;
+
+        void getStudentDetails(int r, String n) {
+            rollNo = r;
+            name = n;
+        }
+
+        void displayStudent() {
+            System.out.println("Roll Number : " + rollNo);
+            System.out.println("Student Name : " + name);
+        }
+    }
+
+    class Marks extends Student {
+
+        int m1, m2, m3;
+
+        void getMarks(int a, int b, int c) {
+            m1 = a;
+            m2 = b;
+            m3 = c;
+        }
+
+        void displayMarks() {
+            System.out.println("Marks : " + m1 + " " + m2 + " " + m3);
+        }
+    }
+
+    class Result extends Marks {
+
+        int total;
+        double percentage;
+
+        void calculateResult() {
+            total = m1 + m2 + m3;
+            percentage = total / 3.0;
+        }
+
+        void displayResult() {
+            System.out.println("Total : " + total);
+            System.out.println("Percentage : " + percentage);
+        }
+    }
+
+    public class MultilevelInheritanceDemo {
+        public static void main(String[] args) {
+
+            Result r = new Result();
+
+            r.getStudentDetails(101, "Rahul");
+            r.getMarks(85, 90, 88);
+            r.calculateResult();
+
+            r.displayStudent();
+            r.displayMarks();
+            r.displayResult();
+        }
+    }
